@@ -5,6 +5,11 @@ const path = require("path");
 const logger = require("morgan");
 const cors = require("cors");
 
+//connect to the backend
+const routes = require('./backend/api/routes.js')
+app.use("/api/", routes)
+//
+
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
