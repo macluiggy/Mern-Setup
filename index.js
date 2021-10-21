@@ -10,8 +10,8 @@ const routes = require('./backend/api/routes.js')
 app.use("/api/", routes)
 //
 
-app.use(logger("dev"));
-app.use(express.json());
+app.use(logger("dev"));//mestra las peticiones por pantalla
+app.use(express.json());//permite enviar json files
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
